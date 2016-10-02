@@ -1,0 +1,40 @@
+{
+  "name": "fxgrid-ang2",
+  "version": "1.0.0",
+  "author": "Graham Phillips",
+  "description": "Simple FX data table",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Graham-Phillips/fxgrid-ang2"
+  },
+  "scripts": {
+    "start" : "gulp webserver",
+    "postinstall": "typings install"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~2.0.1",
+    "@angular/compiler": "~2.0.1",
+    "@angular/core": "~2.0.1",
+    "@angular/forms": "~2.0.1",
+    "@angular/http": "~2.0.1",
+    "@angular/platform-browser": "~2.0.1",
+    "@angular/platform-browser-dynamic": "~2.0.1",
+    "@angular/router": "~3.0.1",
+    "@angular/upgrade": "~2.0.1",
+
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.39",
+    "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "typings":"^1.4.0",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.6",
+    "gulp-webserver": "^0.9.1"
+  }
+}

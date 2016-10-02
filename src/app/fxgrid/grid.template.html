@@ -1,0 +1,54 @@
+<div class="grid-row header">
+    <div class="grid-item sortable" data-columnName="marketName">
+      <div class="header-text">Market</div>
+      <div class="sort-button"></div>
+    </div>
+    <div class="grid-item sortable" data-columnName="bestBid">
+      <div class="header-text">Best bid</div>
+      <div class="sort-button"></div>
+    </div>
+    <div class="grid-item sortable" data-columnName="bestAsk">
+      <div class="header-text">Best ask</div>
+      <div class="sort-button"></div>
+    </div>
+    <div class="grid-item sortable" data-columnName="lastChangeBid">
+      <div class="header-text">Bid change</div>
+      <div class="sort-button"></div>
+    </div>
+    <div class="grid-item sortable" data-columnName="lastChangeAsk">
+      <div class="header-text">Ask change</div>
+      <div class="sort-button"></div>
+    </div>
+    <div class="grid-item">
+      <div class="header-text">Bid history</div>
+    </div>
+    <div class="grid-item">
+      <div class="header-text">Ask history</div>
+    </div>
+    <div class="grid-item">
+      <div class="header-text">Mid Price</div>
+    </div>
+  </div>
+
+  <div id="grid-container">
+    <div class="grid-row" *ngFor="let rowData of rows">
+      <div class="grid-item">
+        <div class="text">{{rowData.displayName}}</div>
+      </div>
+      <div class="grid-item">
+        <div class="text">{{rowData.bestBidsQueue.getCurrent()}}</div>
+      </div>
+      <div class="grid-item">
+        <div class="text">{{rowData.bestAsksQueue.getCurrent()}}</div>
+      </div>
+      <div class="grid-item">
+        <div class="text">{{rowData.lastChangeBid}}</div>
+      </div>
+      <div class="grid-item">
+        <div class="text">{{rowData.lastChangeAsk}}</div>
+      </div>
+      <sparkline class="grid-item" [dataString]="rowData.bestBidsQueue.toString()"></sparkline>
+      <sparkline class="grid-item" [dataString]="rowData.bestAsksQueue.toString()"></sparkline>
+      <sparkline class="grid-item" [dataString]="rowData.midPriceQueue.toString()"></sparkline>
+    </div>
+  </div>

@@ -1,0 +1,58 @@
+/* This css file is included by being imported in index.js */
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ user-select:none;
+}
+
+#grid-container {
+    height: 450px;
+    min-width: 870px;
+    overflow-y: scroll; /* use scroll rather than auto so we don't get misalignment
+                          if a scrollbar is dynamically added */
+    overflow-x:hidden;
+}
+
+.grid-row {
+min-width: 870px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border-bottom: 1px solid #000000;
+}
+
+.grid-row:nth-child(even) {
+   background-color: #F4F4F4;
+}
+
+.grid-row.grid-row-highlight {
+  font-weight: bold;
+}
+
+.grid-row.header {
+  color: 	#FFA500;
+  background-color: #444444;
+  font-weight: bold;
+  padding: 12px 30px 12px 10px;  /* 30px right is to compensate for the scrollbar pushing the content rows left*/
+  border-bottom: 0;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.grid-item {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  min-width: 100px;
+  max-width: 130px;
+}
+
+.grid-item.sortable:hover {
+  cursor:pointer;
+}
+
+.header-text {
+  float: left;
+}
