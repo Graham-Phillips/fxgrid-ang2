@@ -21,7 +21,7 @@ TODOs:
 - Unit tests.
 - click handler for sorting is currently a non-Angular solution.
 - Highlight the updated line.
-- Replace the callbacks that are being used to pass data from services to the view with a decent solution, investidate RXJS Observables, Reflux or similar.
+- Replace the callbacks that are being used to pass data from services to the view with a decent solution, investigate RXJS Observables, Reflux or similar.
 - replace mock service with a Node server and websocket.
 - Type annotations - too many 'any's used for a quick win. Go back and add better Typescript type annotations.
 - Styling: flex used instead of the more traditional table for the grid, to investigate finding a more responsive solution to datagrids. Needs work, layout isn't bulletproof across browsers. Investigate the new css grid layout.
