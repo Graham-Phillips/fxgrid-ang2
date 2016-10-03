@@ -3,7 +3,7 @@ Angular 2 data grid with forex data. Work in progress.
 Naive implementation that assumes a small number of records.
 
 TO USE:
-Ensure you have Git and Node/npm installed. 
+Ensure you have Git, gulp and Node/npm installed. 
 
 run npm i
 
@@ -13,7 +13,7 @@ run gulp
 ABOUT:
 Displays mock fx market data, columns are sortable. 
 
-The last 3 (unsortable) columns are a form of sparkline- they are a bit unusual as they start with a flat line which gradually gains data points over time, as opposed to a time-series style sparkline that grows along the y-axis. The intention is so give a stronger visual indication of the relative price movements when there are only a few data points.
+The last 3 (unsortable) columns are a form of sparkline- they are a bit unusual as they start with a flat line which gradually gains data points over time, as opposed to a time-series style sparkline that grows along the y-axis. The intention is to give a stronger visual indication of the relative price movements when there are only a few data points.
 
 
 TODOs:
