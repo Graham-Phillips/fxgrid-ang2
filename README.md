@@ -8,7 +8,7 @@ Ensure you have Git and Node/npm installed.
 run npm i
 
 run gulp
-- this will build the project and open a browser at http://localhost:8000/ however the sync isn't great with this setup and you will get a "Cannot GET /" on the first hit. Please ctrl-c out of gulp, and then run gulp again to launch the fxgrid. 
+- this will build the project and open a browser at http://localhost:8000/ however you will get a "Cannot GET /" on the first run as the build has not yet completed. Please wait until gulp reports that the Typescript build is complete, ctrl-c out of the gulp process, and then restart gulp.
 
 ABOUT:
 Displays mock fx market data, columns are sortable. 
