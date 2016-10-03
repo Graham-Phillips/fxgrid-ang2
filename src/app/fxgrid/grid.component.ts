@@ -28,44 +28,12 @@ static get DOWN_ARROW_UNICODE() { return '&#x25bc'; };
 
   ngOnInit()
   {
-
-
     // initialise column headers and add click listeners  for the columns that are sortable
     let sortableHeaders = document.querySelectorAll('[data-columnName]');
     for(let i = 0; i < sortableHeaders.length; i++)
     {
       // add initial up or down sort icon to the sorted column
       if(sortableHeaders[i].getAttribute('data-columnName') === this._configObject.sortSelection.column)
-      {
-        if(this.sortSelection.ascending)
-        {
-          (sortableHeaders[i].getElementsByClassName("sort-button"))[0].innerHTML = GridComponent.UP_ARROW_UNICODE;
-        }
-        else
-        {
-          (sortableHeaders[i].getElementsByClassName("sort-button"))[0].innerHTML = GridComponent.DOWN_ARROW_UNICODE;
-        }
-      }
-
-      // column header click handlers
-      this._addHeaderClickHandler(sortableHeaders[i]);
-    }
-  }
-
-  /**
-  * set up the view - add click listeners to column headers, get the initial sort
-  * data from configObject and display the sort icon
-  **/
-  _initialiseView(configObject)
-  {
-    this.sortSelection = configObject.sortSelection; // hold a local copy of sort object
-
-    // initialise column headers and add click listeners  for the columns that are sortable
-    let sortableHeaders = document.querySelectorAll('[data-columnName]');
-    for(let i = 0; i < sortableHeaders.length; i++)
-    {
-      // add initial up or down sort icon to the sorted column
-      if(sortableHeaders[i].getAttribute('data-columnName') === configObject.sortSelection.column)
       {
         if(this.sortSelection.ascending)
         {
