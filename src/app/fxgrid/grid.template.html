@@ -1,23 +1,23 @@
 <div class="grid-row header">
-    <div class="grid-item sortable" data-columnName="marketName">
+    <div class="grid-item sortable" data-columnName="marketName" (click)="onHeaderSortClick($event)">
       <div class="header-text">Market</div>
-      <div class="sort-button"></div>
+      <div class="sort-button" *ngIf="sortSelection.column==='marketName'" [gpSortButton]="sortSelection.ascending"></div>
     </div>
-    <div class="grid-item sortable" data-columnName="bestBid">
+    <div class="grid-item sortable" data-columnName="bestBid" (click)="onHeaderSortClick($event)">
       <div class="header-text">Best bid</div>
-      <div class="sort-button"></div>
+      <div class="sort-button" *ngIf="sortSelection.column==='bestBid'" [gpSortButton]="sortSelection.ascending">B</div>
     </div>
-    <div class="grid-item sortable" data-columnName="bestAsk">
+    <div class="grid-item sortable" data-columnName="bestAsk" (click)="onHeaderSortClick($event)">
       <div class="header-text">Best ask</div>
-      <div class="sort-button"></div>
+      <div class="sort-button" *ngIf="sortSelection.column==='bestAsk'" [gpSortButton]="sortSelection.ascending">C</div>
     </div>
-    <div class="grid-item sortable" data-columnName="lastChangeBid">
+    <div class="grid-item sortable" data-columnName="lastChangeBid" (click)="onHeaderSortClick($event)">
       <div class="header-text">Bid change</div>
-      <div class="sort-button"></div>
+      <div class="sort-button" *ngIf="sortSelection.column==='lastChangeBid'" [gpSortButton]="sortSelection.ascending"></div>
     </div>
-    <div class="grid-item sortable" data-columnName="lastChangeAsk">
+    <div class="grid-item sortable" data-columnName="lastChangeAsk" (click)="onHeaderSortClick($event)">
       <div class="header-text">Ask change</div>
-      <div class="sort-button"></div>
+      <div class="sort-button" *ngIf="sortSelection.column==='lastChangeAsk'" [gpSortButton]="sortSelection.ascending"></div>
     </div>
     <div class="grid-item">
       <div class="header-text">Bid history</div>
