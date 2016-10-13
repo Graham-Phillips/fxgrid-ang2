@@ -44,7 +44,7 @@ export class FxService {
   }
 
   sort(data)
-  {
+  {console.log("sort: " + data.column);
     this._sortSelection = {column: data.column, ascending: data.ascending};
     this._sortMarketData();
     this._dispatchMarketData();
